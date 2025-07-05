@@ -1,0 +1,146 @@
+.ownership-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-section {
+    border: 1px solid var(--line-clr);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: var(--hover-clr);
+}
+
+.form-section h2 {
+    color: var(--text-clr);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-clr);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    color: var(--text-clr);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.required {
+    color: #ff4444;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line-clr);
+    border-radius: 6px;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-clr);
+    box-shadow: 0 0 0 2px rgba(94, 99, 255, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--secondary-text-clr);
+    font-size: 0.9rem;
+}
+
+.hint-text {
+    color: var(--secondary-text-clr);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-submit,
+.btn-cancel {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background-color: var(--accent-clr);
+    color: var(--text-clr);
+    border: none;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: var(--text-clr);
+    border: 1px solid var(--line-clr);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit:hover,
+.btn-cancel:hover {
+    background-color: var(--hover-clr);
+    transform: translateY(-2px);
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.message.success {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.2);
+}
+
+.message.error {
+    background-color: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border: 1px solid rgba(255, 68, 68, 0.2);
+}
+
+@media (max-width: 600px) {
+    .ownership-form {
+        margin: 1rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+    }
+}

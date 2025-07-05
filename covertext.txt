@@ -1,0 +1,52 @@
+Name - Jacob Abraham Palakunnathu
+Username - psxjp9 
+Student ID - 20700939
+
+Declarations
+
+svgs are downloaded form fonts.google/icons
+
+sidebar.php and style.css are developed from an online template. More details below
+
+Since I noticed some comments are causing cluttering and errors sometimes in the website, I moved most long comments and references here. I still have general comments about what blocks of code do in their respective files. If the same idea is used in multiple files, I don't reference it again.
+
+References
+index.php - put a timer on the message to avoid multiple reloads and so a message won't persist after reload.
+-https://www.w3schools.com/js/js_timing.asp. 
+
+dashboard - started using try catch blocks for better error handling(errorlog as well). Learnt about index arrays and associative arrays to store related information
+-https://www.w3schools.com/php/php_arrays.asp (The whole section)
+-bind statements for convenience of input type which made it easier for me to add fall back values as '' (prevents sql injection as well)
+-found shorthand <?= ?> from a code generator
+-htmlspecialchars for rendering error messages. 
+- few ideas from code generator
+
+sidebar.php - template from Coding2GO. https://www.youtube.com/watch?v=R7b3OlEyqug&list=WL&index=3
+
+app.js - Deals with the sidebar's toggle open and close functionality.
+made similar to sidebar made by Coding2GO. https://www.youtube.com/watch?v=R7b3OlEyqug&list=WL&index=3
+
+profile.php - - change button css transition and styling provided by code generator.
+
+people.php, edit_people.php - Learnt how to use foreach to compose dynamic tables. https://www.w3schools.com/php/php_looping_foreach.asp
+-showing input value of search input using GET after reload - https://forums.phpfreaks.com/topic/168338-text-entered-in-form-inputs-disappear-after-page-reload/
+
+vehicle.php, edit_vehicle.php -event listener on input - https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
+- to convert input to uppercase - https://www.w3schools.com/jsref/jsref_touppercase.asp
+
+new_incident, edit_incident, ownership- Using form data since this site has sensitive information. https://radu.link/keep-form-data-submit-refresh-php/#:~:text=Keep%20Form%20Data%20on%20Refresh%20Using%20the%20PHP%20Ternary%20Operator&text=So%2C%20to%20use%20this%20in,)%20%3A%20''%3B%20%3F%3E. This thread gave me the idea to save the post array as a session variable and then unset it to retain values.
+- started using functions to keep track of  multiple user actions on the same page
+-The ajax requests are code generated along with the js functions that handle the field states
+-many threads on stackoverflow and mozilla developer network that I do not quite remember exactly to reference. 
+- new_fine, new_user, new_ownership has a few javascript functions that were implemented from ideas by code generators. Like the toggle officer fields in new user creation was implemented with ideas and snippets of code generator code.
+audit-functions.php, audit.php - contains functions needed for audit logging
+-This webpage contains information about json encode and implode - https://dev.to/programmingdive/convert-an-array-to-string-with-php-500g#:~:text=Using%20json_encode()%20function%20to,JSON%20representation%20of%20a%20value.&text=This%20function%20takes%20any%20value%20as%20input%20except%20resource.
+-I decided to use json encode instead of implode since json encode stores key value pairs as strings. 
+-implode is used in other files to show multiple errors on the screen at the same time
+- Filter logic and pagination logic implemented from Code generator
+
+I have watched many youtube videos and gone through hundreds of threads, so forgive me for not documenting it, these are a few notable ones I found in my history. Code generators have been used in several places for debugging and for better re-organization of code. 
+
+Many css files have many common styles shared across the webpages but there are a few elements in each css file that are code generator generated for very specific needs. I wanted to have different css files for each for any future developer to make any page specific changes. There are three scripts, one is developed from a pre existing template mentioned in references of this file and have parts of code that are similar. The other javascript files have code snippets that are code generator generated. Both these scripts have similar implementation of the same logic.
+
+I have prior experience in Full stack development through the odinproject. https://www.theodinproject.com/

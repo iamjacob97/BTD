@@ -1,0 +1,119 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+    --primary-color: #007bff;
+    --primary-color-dark: #0056b3;
+    --background-color: #000321;
+    --text-color: #333;
+    --error-color: #dc3545;
+    --border-color: #ddd;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+/* Container for the form */
+div {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: min(400px, 90%);
+    margin: 1rem;
+}
+
+/* Form title */
+h1 {
+    font-family: Impact, sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+/* Logo styling */
+img {
+    width: 97px;
+    height: 97px;
+    object-fit: contain;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Input field styling */
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Message styling */
+#message {
+    color: var(--error-color);
+    margin-top: 1rem;
+    font-weight: 600;
+    min-height: 1.5rem;
+}

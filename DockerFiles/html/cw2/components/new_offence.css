@@ -1,0 +1,103 @@
+/* Form Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.container h1 {
+    color: var(--text-clr);
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+form {
+    background-color: var(--base-clr);
+    border: 1px solid var(--line-clr);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    color: var(--text-clr);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--line-clr);
+    border-radius: 0.5rem;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    margin-bottom: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-clr);
+}
+
+/* Readonly Input Styles */
+input[readonly] {
+    background-color: var(--hover-clr);
+    cursor: not-allowed;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--accent-clr);
+    color: var(--text-clr);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 200ms ease;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Message Styles */
+.message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.success {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #f44336;
+    border: 1px solid #f44336;
+}

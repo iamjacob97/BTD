@@ -1,0 +1,107 @@
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.container h1 {
+    color: var(--text-clr);
+    margin-bottom: 2rem;
+}
+
+/* Profile Information Styles */
+.profile-info {
+    background-color: var(--base-clr);
+    border: 1px solid var(--line-clr);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--hover-clr);
+    border-radius: 0.5rem;
+}
+
+.profile-item label {
+    color: var(--secondary-text-clr);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.profile-item span {
+    color: var(--text-clr);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Action Buttons Styles - Original */
+.action-buttons {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn-change-password {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent-clr);
+    color: var(--text-clr);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-change-password:hover {
+    background-color: var(--hover-clr);
+    transform: translateY(-2px);
+}
+
+.btn-change-password svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-change-password:hover svg {
+    transform: rotate(180deg);
+}
+
+/* Message Styles */
+.error-message {
+    text-align: center;
+    color: #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+    border: 1px solid rgba(255, 68, 68, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-info {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .profile-item {
+        padding: 0.75rem;
+    }
+
+    .profile-item span {
+        font-size: 1rem;
+    }
+}
