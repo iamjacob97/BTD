@@ -49,9 +49,8 @@ project-root/
 
 ## 🗄️ Database Design
 
-- 9 relational tables with crow’s foot notation
-- Key relationships: User ↔ Officer ↔ Incident ↔ Fine, Vehicle, Person, Ownership
-- Enforced through foreign key constraints
+- 9 relational tables (schema with crow's  foot notation available in the technical doc)
+- Relations: User, Officer, Incident, Offences, Fine, Vehicle, Person, Ownership, Audit
 
 ---
 
